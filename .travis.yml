@@ -1,0 +1,12 @@
+language: python
+
+python:
+  - 2.6
+  - 2.7
+  - pypy
+
+before_install:
+  - pip install --use-mirrors -r pinax/projects/basic_project/requirements/project.txt
+
+script:
+  - python tests/runner.py --verbosity=2 account
